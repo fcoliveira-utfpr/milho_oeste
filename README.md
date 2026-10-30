@@ -33,8 +33,10 @@ O roteiro completo, da escrita do projeto ao artigo, está em **[planejamento.md
 
 1. Leia o [planejamento.md](planejamento.md), principalmente "A pesquisa em uma página" e a Etapa 0.
 2. Escreva o projeto (Etapa 0) no Google Docs indicado no planejamento.
-3. Abra o notebook 01 pelo botão do Colab (tabela abaixo), faça **Arquivo → Salvar uma cópia no Drive** e siga
-   os notebooks em ordem. Cada um depende dos resultados do anterior.
+3. Faça o **caderno de aprendizagem** (`00_aprendizagem`, primeira linha da tabela abaixo): um só notebook, com um
+   capítulo para cada notebook do TCC, itens resolvidos e itens para pensar e resolver.
+4. Depois, abra o notebook 01 pelo botão do Colab, faça **Arquivo → Salvar uma cópia no Drive** e siga os notebooks
+   do TCC em ordem. Cada um depende dos resultados do anterior.
 
 ---
 
@@ -65,6 +67,7 @@ milho_oeste/
 │                                     ajustáveis e simulação em sequeiro e irrigado (`simular`)
 │
 └── notebooks/                        uma etapa por notebook, comentados para quem está aprendendo Python
+    ├── 00_aprendizagem.ipynb         caderno de aprendizagem: um capítulo por notebook do TCC, feito antes deles
     ├── 01_python_basico.ipynb
     ├── ...
     └── 09_figuras_artigo.ipynb
@@ -76,6 +79,7 @@ milho_oeste/
 
 | Etapa | Notebook | O que faz | Grava no Drive |
 |---|---|---|---|
+| antes | [00_aprendizagem](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/00_aprendizagem.ipynb) | Caderno de aprendizagem: capítulos 1 a 9, um por notebook do TCC, com itens resolvidos e itens para pensar e resolver | |
 | 1 | [01_python_basico](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/01_python_basico.ipynb) | Python básico com exemplos de agrometeorologia; ETo por Penman-Monteith | |
 | 2 | [02_dados_ibge_clima](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/02_dados_ibge_clima.ipynb) | Série de produtividade, tendência tecnológica, anos de quebra, clima da safrinha | figura da série |
 | 3 | [03_mza_um_ciclo](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/03_mza_um_ciclo.ipynb) | Um ciclo do MZA-FAO passo a passo; a equação do ky na mão | |

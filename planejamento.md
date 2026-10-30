@@ -10,6 +10,7 @@
 |---|---|
 | Projeto (texto, escrito na Etapa 0) | [Google Docs, Projeto_TCC1_Leonardo](https://docs.google.com/document/d/116Xqk0QABoqhPXf6kFE_XUrcNBp-UV9TzGH6DA15_QA/edit?usp=sharing) |
 | Código, dados e notebooks | `github.com/fcoliveira-utfpr/milho_oeste` |
+| Caderno de aprendizagem (antes dos notebooks do TCC) | [00_aprendizagem no Colab](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/00_aprendizagem.ipynb) |
 | Resultados das análises | Seu Google Drive, pasta `milho_oeste/resultados` (criada pelos notebooks) |
 | Referências | Grupo da biblioteca Zotero do orientador |
 
@@ -21,6 +22,7 @@
 - [A pesquisa em uma página](#a-pesquisa-em-uma-página)
 - [Como o trabalho roda no Colab](#como-o-trabalho-roda-no-colab)
 - [Etapa 0. Escrita do projeto](#etapa-0-escrita-do-projeto)
+- [Caderno de aprendizagem](#caderno-de-aprendizagem)
 - [Etapa 1. Python básico no Colab](#etapa-1-python-básico-no-colab)
 - [Etapa 2. Dados de produtividade e clima](#etapa-2-dados-de-produtividade-e-clima)
 - [Etapa 3. O MZA-FAO em um município e um ano](#etapa-3-o-mza-fao-em-um-município-e-um-ano)
@@ -46,6 +48,8 @@ Este é o roteiro do seu trabalho, do projeto ao artigo. Cada etapa tem:
 5. **O que observar**: o que conferir nos resultados e a ordem de grandeza esperada (do teste feito pelo orientador);
 6. **Entregar**: o critério para passar à etapa seguinte;
 7. **O que escrever**: o trecho do projeto ou do artigo que nasce daquela etapa.
+
+Há dois tipos de notebook. O **caderno de aprendizagem** (`00_aprendizagem`) é um só, separado em nove capítulos, e ensina em exemplos pequenos cada ideia e cada ferramenta da pesquisa. Os **notebooks do TCC** (`01` a `09`) são a pesquisa em si. A ordem é: primeiro o caderno de aprendizagem inteiro, depois os notebooks 01 a 09 (ver [Caderno de aprendizagem](#caderno-de-aprendizagem)).
 
 Você não precisa saber programar para começar. A programação é aprendida fazendo. Os notebooks são comentados linha a linha, e as funções difíceis (balanço hídrico, produtividade potencial e atingível) já existem na biblioteca `agrometeorologiapy`, desenvolvida pelo orientador, e nos arquivos da pasta `src/`. Seu trabalho é rodar, entender cada passo, interpretar os resultados e escrever.
 
@@ -118,7 +122,7 @@ github.com/fcoliveira-utfpr/milho_oeste
 │   ├── mza_oeste.py             MZA-FAO: simulação de um ciclo, laço por município, eficiência climática
 │   ├── avaliacao.py             índices estatísticos: RMSE, MBE, r, d de Willmott, NSE, KGE
 │   └── dssat_oeste.py           DSSAT CERES-Maize: clima, solo, cultivar, sequeiro e irrigado
-└── notebooks/                   01 a 09, um por etapa
+└── notebooks/                   00 = caderno de aprendizagem; 01 a 09 = notebooks do TCC, um por etapa
 ```
 
 ### A célula 0 de cada notebook
@@ -163,12 +167,11 @@ O documento já tem a formatação da UTFPR (capa, folha de rosto, resumo, abstr
 - **texto em azul e itálico**: orientação do que escrever. Apague à medida que escrever;
 - **texto em preto**: exemplo, que pode ser mantido, adaptado ou substituído.
 
-Escreva no modo **Sugestão** quando estiver alterando um exemplo, para o orientador ver o que mudou. Use os comentários do Google Docs para dúvidas pontuais.
+Escreva os textos e quando estiver uma boa quantidade avancada, informe o orientador e avise o que mudou. Use os comentários do Google Docs para dúvidas pontuais.
 
 ### Antes de escrever
 
-1. **Configure o Zotero.** Instale o Zotero, entre no grupo da biblioteca do orientador e instale o plugin do Zotero para o Google Docs (no Chrome ou Firefox, extensão "Zotero Connector"; no Docs aparece o menu *Zotero*). Escolha o estilo **ABNT (autor-data)**. Toda citação é inserida pelo plugin; nunca digite uma referência à mão.
-2. **Faça as leituras de base, nesta ordem**, com uma ficha de meia página para cada uma (nota do item no Zotero: objetivo, área, dados, método, principal número e como se relaciona com este trabalho):
+1. Recomendo que **Faça as leituras de base, nesta ordem**, com uma ficha de meia página para cada uma:
 
 | Ordem | Referência | Para qual seção do projeto |
 |---|---|---|
@@ -188,8 +191,8 @@ Escreva no modo **Sugestão** quando estiver alterando um exemplo, para o orient
 Não escreva na ordem do sumário. A ordem que funciona é:
 
 1. **Objetivos (2).** Já há exemplos. Leia, entenda e ajuste. Se você não conseguir explicar cada objetivo com suas palavras, volte às leituras.
-2. **Metodologia (4).** Escreva no futuro, com as equações numeradas. Use o próprio planejamento e os notebooks das Etapas 3, 6 e 7 como guia (as equações estão lá).
-3. **Referencial teórico (3).** Uma subseção por vez, a partir das fichas. Cada parágrafo termina com citação.
+2. **Referencial teórico (3).** Uma subseção por vez, a partir das fichas. Cada parágrafo termina com citação.
+3. **Metodologia (4).** Escreva no futuro, com as equações numeradas. Use o próprio planejamento e os notebooks das Etapas 3, 6 e 7 como guia (as equações estão lá).
 4. **Introdução (1).** Em funil: importância do milho → Paraná e Oeste → risco climático da safrinha → yield gap → lacuna → hipótese e objetivo. Já há três parágrafos de exemplo.
 5. **Cronograma (5).** Ajuste os meses ao início real do trabalho. Cada linha corresponde a uma etapa deste planejamento.
 6. **Resumo e abstract.** Por último, quando todo o resto estiver pronto.
@@ -205,15 +208,50 @@ Não escreva na ordem do sumário. A ordem que funciona é:
 
 ### Entregar
 
-O projeto completo no Google Docs, sem textos em azul, revisado pelo orientador. Depois de aprovado, exporte em PDF (*Arquivo → Fazer download → PDF*) para a entrega formal.
+O projeto completo no Google Docs, sem textos em azul, revisado pelo orientador. Depois de aprovado, exporte em PDF e docx para a entrega formal.
 
-**Atenção a uma mudança de método.** No item 4.5 do projeto, a partição em três parcelas segue a definição desta versão do planejamento: YG_data é a parte do YG_hídrico que a melhor data evitaria, e YG_inevitável é o restante (veja a Etapa 7). Ajuste a equação do exemplo ao escrever.
+---
+
+## Caderno de aprendizagem
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/00_aprendizagem.ipynb)
+
+**Objetivo.** Aprender, antes da pesquisa, cada ideia e cada ferramenta que os notebooks do TCC usam. Os notebooks 01 a 09 rodam o trabalho completo (50 municípios, calibração, partição), e muita coisa acontece em poucas linhas. O caderno de aprendizagem separa essas coisas em exemplos pequenos, para você chegar aos notebooks do TCC sabendo o que cada passo faz.
+
+### Como ele está organizado
+
+É **um único notebook**, com **um capítulo para cada notebook do TCC**, na mesma ordem. Em cada capítulo há dois tipos de item:
+
+- **Resolvido**: o exemplo vem pronto, com explicação e comentários. Rode, leia e mude os valores para ver o efeito;
+- **Para pensar e resolver**: perguntas para responder com código ou com texto, na célula vazia abaixo. Umas pedem uma conta; outras pedem que você explique um resultado com suas palavras.
+
+| Capítulo | O que ensina | Prepara para |
+|---|---|---|
+| 1 | Funções, laços e decisões com a soma térmica (graus-dia, dias até a maturação) | Etapa 1 |
+| 2 | pandas com a série do IBGE: tendência tecnológica, anomalia, chuva da safrinha | Etapa 2 |
+| 3 | Balanço hídrico de "balde" feito à mão, ISNA e a equação do ky | Etapa 3 |
+| 4 | Laços de simulação com `M.simular`, resumo por grupo, gravar e retomar | Etapa 4 |
+| 5 | PP × IBGE: junção de tabelas, gráfico 1:1 e quantis | Etapa 5 |
+| 6 | Índices de desempenho, calibração em dados sintéticos (grade, otimizador, validação) e o raciocínio circular | Etapa 6 |
+| 7 | Partição do yield gap com números simples, o limite do YG_data, Mann-Kendall e Sen | Etapa 7 |
+| 8 | Ky emergente por mínimos quadrados e o efeito da soma térmica no ciclo | Etapa 8 |
+| 9 | Figura com dois painéis em 300 dpi e tabela para o artigo | Etapa 9 |
+
+### Como usar
+
+1. Faça o caderno **inteiro, do capítulo 1 ao 9, antes de abrir o notebook 01 do TCC**. Ele pode ser feito ao mesmo tempo que a escrita do projeto (Etapa 0): os capítulos 3, 6 e 7 ajudam a escrever a Metodologia.
+2. Os itens resolvidos rodam em poucos segundos cada um, e nada precisa ser gravado no Drive.
+3. As respostas dos itens "para pensar e resolver" são a pauta das reuniões com o orientador.
+
+**Entregar.** O caderno com todos os itens "para pensar e resolver" respondidos. O item 1 do capítulo 6 (o raciocínio circular) é o mais importante: sem entendê-lo, a Etapa 6 não faz sentido.
 
 ---
 
 ## Etapa 1. Python básico no Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/01_python_basico.ipynb)
+
+**Antes desta etapa:** capítulo 1 do [caderno de aprendizagem](#caderno-de-aprendizagem).
 
 **Objetivo.** Aprender o mínimo de Python para seguir o projeto, usando exemplos de agrometeorologia.
 
@@ -248,6 +286,8 @@ def graus_dia(tmax, tmin, tb=10.0):
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/02_dados_ibge_clima.ipynb)
 
+**Antes desta etapa:** capítulo 2 do [caderno de aprendizagem](#caderno-de-aprendizagem).
+
 **Objetivo.** Conhecer os dados: quanto o Oeste produz, como a produtividade evoluiu e quais anos tiveram quebra.
 
 **O que o notebook faz.**
@@ -276,6 +316,8 @@ A inclinação `a` é o **ganho tecnológico**: quanto a produtividade cresce po
 ## Etapa 3. O MZA-FAO em um município e um ano
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/03_mza_um_ciclo.ipynb)
+
+**Antes desta etapa:** capítulo 3 do [caderno de aprendizagem](#caderno-de-aprendizagem).
 
 **Objetivo.** Entender, passo a passo, o que o modelo faz num único ciclo (Santa Helena, semeadura em 05/02).
 
@@ -311,6 +353,8 @@ PA = PP × Π [1 − ky,i (1 − ETRi/ETci)]. O **ISNA** (ETR/ETc) de cada fase 
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/04_simulacao_oeste.ipynb)
 
+**Antes desta etapa:** capítulo 4 do [caderno de aprendizagem](#caderno-de-aprendizagem).
+
 **Objetivo.** Rodar o MZA-FAO para 50 municípios × 27 anos (1999 a 2025) × 9 datas de semeadura (dias 5, 15 e 25 de janeiro, fevereiro e março): 12.150 ciclos. É a base de todas as etapas seguintes.
 
 **O que o notebook faz.**
@@ -337,6 +381,8 @@ if arquivo.exists():
 ## Etapa 5. Verificação da produtividade potencial
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/05_verificacao_pp.ipynb)
+
+**Antes desta etapa:** capítulo 5 do [caderno de aprendizagem](#caderno-de-aprendizagem).
 
 **Objetivo.** Conferir se a PP está numa faixa realista antes de calibrar. A PP é o teto: com manejo perfeito e sem falta de água, nenhum município deveria colher acima dela de forma sistemática.
 
@@ -366,6 +412,8 @@ fator_proposto = np.quantile(recentes["PR_sobre_PP"], 0.95)   # PP acima de 95% 
 ## Etapa 6. Calibração e validação do ky
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/06_calibracao_ky.ipynb)
+
+**Antes desta etapa:** capítulo 6 do [caderno de aprendizagem](#caderno-de-aprendizagem).
 
 **Objetivo.** Encontrar os ky de cada fase que fazem a quebra simulada reproduzir a quebra observada. É a etapa central do trabalho.
 
@@ -424,6 +472,8 @@ def erro(x, estrategia, anos=None):
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/07_yield_gap.ipynb)
 
+**Antes desta etapa:** capítulo 7 do [caderno de aprendizagem](#caderno-de-aprendizagem).
+
 **Objetivo.** Calcular a PA com o ky calibrado e dividir o yield gap em três parcelas.
 
 ### O nível da PA, um ponto de decisão
@@ -478,6 +528,8 @@ A melhor data de cada município é a de maior PA média ao longo dos anos. Tamb
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/08_dssat_ky_emergente.ipynb)
 
+**Antes desta etapa:** capítulo 8 do [caderno de aprendizagem](#caderno-de-aprendizagem).
+
 **Ponto de decisão.** Esta etapa só começa com as Etapas 6 e 7 concluídas e conferidas. Se o tempo apertar, o artigo se sustenta sem ela, e o DSSAT vai para a discussão como trabalho futuro.
 
 **Objetivo.** Usar um modelo de processo como segunda opinião sobre o déficit hídrico, em cinco municípios: Santa Helena, Cascavel, Toledo, Guaíra e o de solo mais arenoso (Diamante D'Oeste).
@@ -515,6 +567,8 @@ COEF = {"P1": 280, "P5": 900, "G2": 750, "G3": 8.5}   # ponto de partida
 ## Etapa 9. Figuras e tabelas do artigo
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fcoliveira-utfpr/milho_oeste/blob/main/notebooks/09_figuras_artigo.ipynb)
+
+**Antes desta etapa:** capítulo 9 do [caderno de aprendizagem](#caderno-de-aprendizagem).
 
 **Objetivo.** Gerar, num único lugar e com o mesmo padrão visual, as figuras e tabelas finais, em 300 dpi, na pasta `figuras_artigo/` do Drive.
 
