@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+resultados/
+*.pyc
+.DS_Store
+~$*
